@@ -13,7 +13,7 @@ function Context({ children }) {
   const [loading, setLoading] = useState(false);
   const fetchData = async () => {
     setLoading(true);
-    const url = "https://opentdb.com/api.php?amount=2";
+    const url = "https://opentdb.com/api.php?amount=10";
     const data = await fetch(url);
     const res = await data.json();
     setQuestionList(res.results);
